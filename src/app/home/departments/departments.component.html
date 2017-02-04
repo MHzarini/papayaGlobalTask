@@ -1,0 +1,39 @@
+<div class="col-sm-6">
+  <h3>
+    Departments
+  </h3>
+  <accordion [showArrows]="true">
+    <accordion-group *ngFor="let department of allDepartmentsList; let i = index">
+      <accordion-heading>
+        {{ department.name }} <span class="badge">{{ department.employees.length }}</span>
+      </accordion-heading>
+      <table class="table table-striped">
+        <tbody>
+          <tr *ngFor="let employee of department.employees; let inner = index">
+            <td><img src="{{employee.image}}" width="32px" height="32px" class="img-thumbnail" alt="Thumbnail Image"></td>
+            <td>
+              <span title="Double click to edit" (dblclick)="editing[i + '-' + inner + '-name'] = true" *ngIf="!editing[i + '-' + inner + '-name']">
+              {{employee.name}}
+            </span>
+              <input autofocus (blur)="updateValue($event, 'name', employee.name, i, inner)" *ngIf="editing[i + '-' + inner + '-name']" type="text" [value]="employee.name"
+              />
+            </td>
+            <td><span title="Double click to edit" (dblclick)="editing[i + '-' + inner + '-email'] = true" *ngIf="!editing[i + '-' + inner + '-email']">
+              {{employee.email}}
+            </span>
+              <input autofocus (blur)="updateValue($event, 'email', employee.email, i, inner)" *ngIf="editing[i + '-' + inner + '-email']" type="email" [value]="employee.email"
+              /></td>
+            <td><span title="Delete" (click)="deleteEmployee(i, inner)" class="glyphicon glyphicon-remove"></span></td>
+            
+          </tr>
+          <tr>
+            <td><span title="Add new employee" (click)="addNewEmployee(i)" class="glyphicon glyphicon-plus"></span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </accordion-group>
+  </accordion>
+</div>
