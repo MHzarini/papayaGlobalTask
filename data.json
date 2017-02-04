@@ -1,0 +1,92 @@
+[
+    {
+        "employees": [
+            {
+                "email": "parker_travis@mysompany.com",
+                "image": "http://placehold.it/32x32",
+                "name": "Parker Travis",
+                "id": "589514f2bc515eea83c0ba8e"
+            }
+        ],
+        "name": "Engineering Department",
+        "id": "589514f2463d3c634b1fb183"
+    },
+    {
+        "employees": [
+            {
+                "email": "baker_cummings@mysompany.com",
+                "image": "http://placehold.it/32x32",
+                "name": "Baker Cummings",
+                "id": "589514f2b706efa0b3dffa3f"
+            },
+            {
+                "email": "hess_knowles@mysompany.com",
+                "image": "http://placehold.it/32x32",
+                "name": "Hess Knowles",
+                "id": "589514f23a3868879941c7d1"
+            }
+        ],
+        "name": "Logistics",
+        "id": "589514f2f74491dfd1b7c247"
+    },
+    {
+        "employees": [
+            {
+                "email": "huffman_reeves@mysompany.com",
+                "image": "http://placehold.it/32x32",
+                "name": "Huffman Reeves",
+                "id": "589514f23014ec1d3f34eb01"
+            },
+            {
+                "email": "leanna_owen@mysompany.com",
+                "image": "http://placehold.it/32x32",
+                "name": "Leanna Owen",
+                "id": "589514f268a697e1a2d7df51"
+            },
+            {
+                "email": "hazel_hawkins@mysompany.com",
+                "image": "http://placehold.it/32x32",
+                "name": "Hazel Hawkins",
+                "id": "589514f2313fcf912ad4310d"
+            },
+            {
+                "email": "josefina_hernandez@mysompany.com",
+                "image": "http://placehold.it/32x32",
+                "name": "Josefina Hernandez",
+                "id": "589514f2f6ac679485d89abc"
+            }
+        ],
+        "name": "Purchasing Department",
+        "id": "589514f2f875aa6c63f56ce3"
+    },
+    {
+        "employees": [
+            {
+                "email": "young_rocha@mysompany.com",
+                "image": "http://placehold.it/32x32",
+                "name": "Young Rocha",
+                "id": "589514f27d8173b3296ddcff"
+            },
+            {
+                "email": "brianna_parker@mysompany.com",
+                "image": "http://placehold.it/32x32",
+                "name": "Brianna Parker",
+                "id": "589514f22d443e07b0162d09"
+            }
+        ],
+        "name": "Shipping department",
+        "id": "589514f2e39b83decd7e85cc"
+    },
+    {
+        "employees": [
+            {
+                "email": "helena_barrett@mysompany.com",
+                "image": "http://placehold.it/32x32",
+                "name": "Helena Barrett",
+                "id": "589514f2fb5c00c196134e5b"
+            }
+        ],
+        "name": "Accounting Department",
+        "id": "589514f261894e549d467dbf"
+    }
+]

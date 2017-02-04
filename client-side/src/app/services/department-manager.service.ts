@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
@@ -17,7 +17,9 @@ export class DepartmentManagerService {
   }
 
   getallDepartments(): Observable<Department[]> {
-    return this.http.get('http://beta.json-generator.com/api/json/get/EyPLNlCvG')
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.get('/api/departments')
       .map(res => res.json())
       .map(rawDepartments => rawDepartments.map(Department.create))
       .map(response => this.allDepartmentsList = response);
