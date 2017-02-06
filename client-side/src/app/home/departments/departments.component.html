@@ -18,7 +18,8 @@
           <tr *ngFor="let employee of department.employees; let inner = index">
             <td>
               <img  title="Double click to edit" (dblclick)="editing[i + '-' + inner + '-image'] = true" *ngIf="!editing[i + '-' + inner + '-image']" src="{{employee.image}}" width="32px" height="32px" class="img-thumbnail" alt="Thumbnail Image"><br>
-              <input  *ngIf="editing[i + '-' + inner + '-image']" type="file" image-upload (imageSelected)="selected($event, i, inner)" [resizeOptions]="resizeOptions">
+              <input autofocus (blur)="updateValue($event, 'image', employee.image, i, inner)" *ngIf="editing[i + '-' + inner + '-image']"
+                type="text" [value]="employee.image" />
             </td>
             <td>
               <span title="Double click to edit" (dblclick)="editing[i + '-' + inner + '-name'] = true" *ngIf="!editing[i + '-' + inner + '-name']">

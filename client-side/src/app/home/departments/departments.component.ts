@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ImageResult, ResizeOptions } from 'ng2-imageupload';
 
 import { Department } from '../../models/department';
 import { Employee } from '../../models/employee';
@@ -12,11 +11,6 @@ import { Employee } from '../../models/employee';
 export class DepartmentsComponent {
 
   @Input() allDepartmentsList: Department[];
-  src: string = "";
-  resizeOptions: ResizeOptions = {
-    resizeMaxHeight: 32,
-    resizeMaxWidth: 32
-  };
 
   private selectedId: number;
   private editing = {};
@@ -29,7 +23,6 @@ export class DepartmentsComponent {
       this.editing[departmentIndex + '-' + cell] = false;
       this.allDepartmentsList[departmentIndex][cell] = event.target.value;
     }
-
   }
 
   addNewEmployee(index) {
@@ -46,13 +39,6 @@ export class DepartmentsComponent {
 
   deleteDepartment(departmentIndex) {
     this.allDepartmentsList.splice(departmentIndex, 1);
-  }
-
-  selected(imageResult: ImageResult, departmentIndex, employeeIndex) {
-    this.editing[departmentIndex + '-' + employeeIndex + '-image'] = false;
-    this.allDepartmentsList[departmentIndex].employees[employeeIndex]['image'] = imageResult.resized
-      && imageResult.resized.dataURL
-      || imageResult.dataURL;
   }
 
 }
