@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AccordionModule } from "ngx-accordion";
+import { ImageUploadModule } from 'ng2-imageupload';
 import { AppRouteModule } from './app.routes';
 
 import { AppComponent } from './app.component';
@@ -25,6 +26,7 @@ import { DepartmentManagerService } from './services/department-manager.service'
     FormsModule,
     HttpModule,
     AccordionModule,
+    ImageUploadModule,
     AppRouteModule
   ],
   providers: [
